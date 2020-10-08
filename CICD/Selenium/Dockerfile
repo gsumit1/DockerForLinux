@@ -20,7 +20,7 @@ RUN yum-config-manager --enable cr && \
     yum -y clean all && \
     rm -rf /var/cache/yum
 
-RUN yum install unzip
+RUN yum -y install unzip
 
 ARG MAVEN_VERSION=3.6.3
 ENV MAVEN_URL https://mirror.netcologne.de/apache.org/
