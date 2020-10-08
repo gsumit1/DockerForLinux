@@ -20,6 +20,7 @@ RUN yum-config-manager --enable cr && \
     yum -y clean all && \
     rm -rf /var/cache/yum
 
+RUN yum install unzip
 
 ARG MAVEN_VERSION=3.6.3
 ENV MAVEN_URL https://mirror.netcologne.de/apache.org/
@@ -41,7 +42,7 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.
 ENV CHROMEDRIVER_VERSION 86.0.4240.22
 ENV CHROMEDRIVER_DIR /chromedriver
 RUN mkdir -p $CHROMEDRIVER_DIR
-RUN yum install unzip
+
     
 
 # Download and install Chromedriver
