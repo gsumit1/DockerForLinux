@@ -110,7 +110,7 @@ pipeline {
         agent {
           dockerfile {
               filename 'Dockerfile'
-              dir 'cicd/docker/selenium'
+              dir 'CICD/docker/selenium'
               label 'Docker-enabled'
           }
         }
