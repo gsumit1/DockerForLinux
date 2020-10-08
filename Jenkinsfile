@@ -121,7 +121,7 @@ pipeline {
            // jslMavenWrapper("-f SampleTools/pom.xml clean install")
             try {
             
-            jslMavenWrapper("-f pom.xml clean install")
+            jslMavenWrapper("-f pom.xml test")
             
             
             
