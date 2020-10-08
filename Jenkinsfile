@@ -117,7 +117,7 @@ pipeline {
         steps {
           script {
             //sh('curl -k https://ctl-consumer--pp4uat.my.salesforce.com/')
-            sh('cat /etc/hosts')
+            //sh('cat /etc/hosts')
             //jslMavenWrapper("-f pom.xml test")
             try {
             
