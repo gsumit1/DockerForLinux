@@ -118,7 +118,7 @@ pipeline {
           script {
             //sh('curl -k https://ctl-consumer--pp4uat.my.salesforce.com/')
             sh('cat /etc/hosts')
-           // jslMavenWrapper("-f SampleTools/pom.xml clean install")
+            jslMavenWrapper("-f pom.xml test")
             try {
             
             jslMavenWrapper("-f pom.xml test")
