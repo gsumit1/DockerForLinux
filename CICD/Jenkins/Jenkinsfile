@@ -118,9 +118,14 @@ pipeline {
           script {
             sh('curl -k https://ctl-consumer--pp4uat.my.salesforce.com/')
             sh('cat /etc/hosts')
-            jslMavenWrapper("-f SampleTools/pom.xml clean install")
+           // jslMavenWrapper("-f SampleTools/pom.xml clean install")
             try {
-		jslMavenWrapper("-f SampleTests/pom.xml verify serenity:aggregate -Dstaf.environment.key=${params.Environment} -Dwebdriver.driver=chrome -Dwebdriver.timeouts.implicitlywait=40000")
+            
+            jslMavenWrapper("-f pom.xml clean install")
+            
+            
+            
+		//jslMavenWrapper("-f SampleTests/pom.xml verify serenity:aggregate -Dstaf.environment.key=${params.Environment} -Dwebdriver.driver=chrome -Dwebdriver.timeouts.implicitlywait=40000")
 	    }
 		
 		//clean verify serenity:aggregate -Dstaf.environment.key=TEST1 -Dcucumber.options='src/test/resources/features --tags @google --plugin json:target/TestResult.json' -Dwebdriver.timeouts.implicitlywait=40000 -Dstaf.mal.key=${params.MAL} -Dstaf.testtype.key=${params.TestType} -Dstaf.environment.key=${params.Environment} -Dwebdriver.driver=chrome -Dwebdriver.timeouts.implicitlywait=40000")            }
