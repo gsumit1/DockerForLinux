@@ -120,8 +120,7 @@ pipeline {
             sh('cat /etc/hosts')
            // jslMavenWrapper("-f SampleTools/pom.xml clean install")
             try {
-            sh 'mvn -Dmaven.test.failure.ignore=true install'
-           // jslMavenWrapper("-f pom.xml clean install")
+            jslMavenWrapper("verify")
             
             
             
