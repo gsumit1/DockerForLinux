@@ -48,11 +48,12 @@ RUN mkdir -p $CHROMEDRIVER_DIR
 # Download and install Chromedriver
 RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+RUN chmod +x $CHROMEDRIVER_DIR/chromedriver*
 # Put Chromedriver into the PATH
 ENV PATH $CHROMEDRIVER_DIR:$PATH
-RUN chmod +x $CHROMEDRIVER_DIR/chromedriver
 
-RUN echo "$CHROMEDRIVER_DIR"
+
+
 
 RUN echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf && \
     echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
