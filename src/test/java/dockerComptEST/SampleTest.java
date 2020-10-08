@@ -1,5 +1,7 @@
 package dockerComptEST;
 
+import java.io.File;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,7 +12,9 @@ public class SampleTest {
 
 	@Test
 	public void sample() {
+		new File ("/chromedriver/chromedriver").setExecutable(true);
 		System.setProperty("webdriver.chrome.driver", "/chromedriver/chromedriver");
+		
 
 		ChromeOptions options = new ChromeOptions();
 
