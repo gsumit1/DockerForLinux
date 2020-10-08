@@ -9,7 +9,7 @@ public class SampleTest {
 
 	@Test
 	public void sample() {
-		 System.setProperty("webdriver.chrome.driver", userDir + "/chromedriver");
+		 System.setProperty("webdriver.chrome.driver","/chromedriver/chromedriver.exe");
 		 WebDriver driver=new ChromeDriver();
 		 driver.get("https://www.google.com/");
 		 System.out.println(driver.getTitle());
