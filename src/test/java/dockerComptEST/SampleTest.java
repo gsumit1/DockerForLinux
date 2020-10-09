@@ -30,7 +30,7 @@ public class SampleTest {
 			}
 
 		} */
-		System.setProperty("webdriver.chrome.driver", "/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "/chromedriver");
 
 		ChromeDriver driver = new ChromeDriver();
 
