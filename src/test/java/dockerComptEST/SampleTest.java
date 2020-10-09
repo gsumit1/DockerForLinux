@@ -12,7 +12,7 @@ public class SampleTest {
 
 	@Test
 	public void sample() {
-		/*
+		
 		try {
 			new File("/chromedriver/chromedriver").setExecutable(true);
 			System.out.println("1st block");
@@ -29,7 +29,7 @@ public class SampleTest {
 
 			}
 
-		} */
+		} 
 		//System.setProperty("webdriver.chrome.driver", "/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--incognito");
