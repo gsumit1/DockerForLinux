@@ -14,14 +14,15 @@ public class SampleTest {
 	public void sample() {
 		
 		try {
-			new File("/chromedriver/chromedriver").setExecutable(true);
+			System.out.println("Hello I am sumit");
+			new File("/chromedriver").setExecutable(true);
 			System.out.println("1st block");
 		} catch (Exception e) {
 
 			System.out.println("1st error");
 
 			try {
-				new File("/chromedriver").setExecutable(true);
+				new File("/chromedriver/chromedriver").setExecutable(true);
 				System.out.println("2st block");
 			} catch (Exception e1) {
 
