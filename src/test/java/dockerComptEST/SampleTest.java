@@ -12,7 +12,7 @@ public class SampleTest {
 
 	@Test
 	public void sample() {
-		new File ("/chromedriver/chromedriver").setExecutable(true);
+		//new File ("/chromedriver/chromedriver").setExecutable(true);
 		System.setProperty("webdriver.chrome.driver", "/chromedriver/chromedriver");
 		
 
