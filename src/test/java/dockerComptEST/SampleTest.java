@@ -44,7 +44,7 @@ public class SampleTest {
 	    
 		ChromeDriver driver = new ChromeDriver(options);
 
-		driver.get("https://www.google.com/");
+		driver.get("https://www.lumen.com/en-us/home.html");
 
 		/*
 		 * 
@@ -60,7 +60,7 @@ public class SampleTest {
 		 * ChromeDriver(service, options);
 		 */
 
-		driver.get("https://www.google.com/");
+		
 		System.out.println(driver.getTitle());
 
 	}
