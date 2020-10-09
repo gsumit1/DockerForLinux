@@ -46,13 +46,24 @@ RUN mkdir -p $CHROMEDRIVER_DIR
     
 
 # Download and install Chromedriver
-RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
-RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+#RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
+#RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+
+# Put Chromedriver into the PATH
+#ENV PATH $CHROMEDRIVER_DIR:$PATH
+
+#RUN chmod a+x $CHROMEDRIVER_DIR/chromedriver*
+
+# Download and install Chromedriver
+RUN CHROMEVER=$(google-chrome --product-version | grep -o "[^\.]*\.[^\.]*\.[^\.]*") && \
+    DRIVERVER=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROMEVER") && \
+    wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$DRIVERVER/chromedriver_linux64.zip" && \
+    unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 # Put Chromedriver into the PATH
 ENV PATH $CHROMEDRIVER_DIR:$PATH
 
-RUN chmod a+x $CHROMEDRIVER_DIR/chromedriver*
+RUN chmod a+x $CHROMEDRIVER_DIR/chromedriver
 
 
 RUN echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf && \
