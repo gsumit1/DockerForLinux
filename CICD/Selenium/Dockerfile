@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM centos:7
 LABEL Description="This is a base image, which provides a selenium environment"
 
 ARG user=jenkins
