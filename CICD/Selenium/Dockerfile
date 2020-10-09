@@ -39,7 +39,7 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.
     
 
 # Set up Chromedriver Environment variables
-ENV CHROMEDRIVER_VERSION 85.0.4183.87
+ENV CHROMEDRIVER_VERSION 86.0.4240.22
 ENV CHROMEDRIVER_DIR /chromedriver
 RUN mkdir -p $CHROMEDRIVER_DIR
 
