@@ -31,8 +31,18 @@ public class SampleTest {
 
 		} */
 		//System.setProperty("webdriver.chrome.driver", "/chromedriver");
-
-		ChromeDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--incognito");
+	    options.addArguments("--headless");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--start-maximixed");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
+	    
+		ChromeDriver driver = new ChromeDriver(options);
 
 		driver.get("https://www.google.com/");
 
