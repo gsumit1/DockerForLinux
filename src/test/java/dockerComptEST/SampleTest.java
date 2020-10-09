@@ -14,6 +14,15 @@ public class SampleTest {
 	public void sample() {
 		//new File ("/chromedriver/chromedriver").setExecutable(true);
 		System.setProperty("webdriver.chrome.driver", "/chromedriver/chromedriver");
+		
+		ChromeDriver driver = new ChromeDriver();
+
+		driver.get("https://www.google.com/");
+		
+		
+		
+		/*
+		
 		ChromeOptions options = new ChromeOptions();
 		//System.setProperty("webdriver.chrome.driver", "/chromedriver/chromedriver");
 		options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -23,7 +32,7 @@ public class SampleTest {
 		options.addArguments("--no-sandbox"); //
 		options.addArguments("--headless"); //
 		ChromeDriverService service = ChromeDriverService.createDefaultService();
-		ChromeDriver driver = new ChromeDriver(service, options);
+		ChromeDriver driver = new ChromeDriver(service, options);*/
 
 		driver.get("https://www.google.com/");
 		System.out.println(driver.getTitle());
