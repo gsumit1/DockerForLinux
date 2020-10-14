@@ -63,7 +63,7 @@ RUN CHROMEVER=$(google-chrome --product-version | grep -o "[^\.]*\.[^\.]*\.[^\.]
 # Put Chromedriver into the PATH
 ENV PATH $CHROMEDRIVER_DIR:$PATH
 
-RUN chmod a+x $CHROMEDRIVER_DIR/chromedriver*
+RUN sudo chmod a+x $CHROMEDRIVER_DIR/chromedriver*
 
 RUN echo "$PATH"
 
