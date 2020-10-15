@@ -15,7 +15,7 @@ public class SampleTest {
 		
 		try {
 			System.out.println("Hello I am sumit");
-			new File("/chromedriver").setExecutable(true);
+			new File("/chromedriver/chromedriver.exe").setExecutable(true);
 			System.out.println("1st block");
 		} catch (Exception e) {
 
@@ -31,7 +31,7 @@ public class SampleTest {
 			}
 
 		} 
-		//System.setProperty("webdriver.chrome.driver", "/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/chromedriver/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--incognito");
 	    options.addArguments("--headless");
