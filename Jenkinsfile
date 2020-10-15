@@ -120,7 +120,7 @@ pipeline {
             sh('cat /etc/hosts')
             //jslMavenWrapper("-f pom.xml test")
             try {
-             sh 'mvn install'
+             sh 'mvn verify'
            
             //jslMavenWrapper("verify")
             //    sh 'mvn -Dmaven.test.failure.ignore=true install'
