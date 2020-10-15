@@ -73,7 +73,7 @@ RUN mkdir -p /chromedriver
 RUN cd /chromedriver
 RUN wget http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
 RUN unzip chromedriver_linux64
-RUN chmod a+x chromedriver.exe
+RUN chmod a+x chromedriver
 
 RUN echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf && \
     echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
