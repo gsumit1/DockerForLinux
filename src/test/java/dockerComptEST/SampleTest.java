@@ -8,8 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class SampleTest {
-	final static String userDir = System.getProperty("user.dir");
-
+	
 	@Test
 	public void sample() {
 		
