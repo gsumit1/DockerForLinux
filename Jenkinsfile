@@ -120,10 +120,11 @@ pipeline {
             sh('cat /etc/hosts')
             //jslMavenWrapper("-f pom.xml test")
             try {
-             sh 'mvn -Dmaven.test.failure.ignore=true install'
+             sh 'mvn install'
            
             //jslMavenWrapper("verify")
-            
+            //    sh 'mvn -Dmaven.test.failure.ignore=true install'
+         
             
             
 		//jslMavenWrapper("-f SampleTests/pom.xml verify serenity:aggregate -Dstaf.environment.key=${params.Environment} -Dwebdriver.driver=chrome -Dwebdriver.timeouts.implicitlywait=40000")
