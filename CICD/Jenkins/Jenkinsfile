@@ -35,8 +35,8 @@ pipeline {
         JIRA_CREDENTIALS Jira access info, jenkins secret file credential with environment variables to export
         MSTEAMS_CREADENTIALS MS Teams access info, jenkins secret text
       */
-      GITHUB_TOKEN_CREDENTIALS = 'allyourbotsarebelongtous-token'
-      GITHUB_SSH_CREDENTIALS = ''
+      GITHUB_TOKEN_CREDENTIALS = 'SCMAUTO_GITHUB'
+      GITHUB_SSH_CREDENTIALS = 'SCMAUTO_GITHUB'
       DOCKER_CREDENTIALS = ''
       KUBE_CREDENTIALS = ''
       KUBE_CREDENTIALS_TEST = ''
