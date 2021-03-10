@@ -13,7 +13,7 @@ library(
         [
           $class: 'GitSCMSource',
           remote: "git@github.com:CenturyLink/jsl-jenkins-shared-library.git",
-          credentialsId: 'allyourbotsarebelongtous'
+          credentialsId: 'SCMAUTO_SSH_DEVOPS_PIPELINE'
         ]
       )
     ) _
