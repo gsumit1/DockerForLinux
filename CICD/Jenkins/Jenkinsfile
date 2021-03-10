@@ -13,6 +13,7 @@ library(
         [
           $class: 'GitSCMSource',
           remote: "git@github.com:CenturyLink/jsl-jenkins-shared-library.git",
+	  extensions: [[$class: 'WipeWorkspace']], //AK Brute force clean workspace (Juan),	
           credentialsId: 'SCMAUTO_SSH_DEVOPS_PIPELINE'
         ]
       )
